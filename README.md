@@ -32,3 +32,13 @@ set show-all-if-ambiguous on
 ```
 
 into `$HOME/.inputrc`.
+
+## features
+
+### getpack
+
+lists all getpack'able packages
+
+### git lb-checkout
+
+completes `git lb-checkout [branches and tags] [packages in the chosen project]`
