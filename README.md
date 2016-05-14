@@ -1,3 +1,11 @@
+# lb-bash
+
+this is just a bash port of pseyfert/lb-zsh.
+
+## demo
+
+See this [screencast](http://virgilio.mib.infn.it/~seyfert/videos/lb-bash.webm)
+
 ## how to
 
 get the code
