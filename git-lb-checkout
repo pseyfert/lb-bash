@@ -1,0 +1,16 @@
+_git-lb-checkout() {
+  case $COMP_CWORD in
+  1)
+    __gitcomp "$(__git_refs)"
+    ;;
+  2)
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    local project=$(echo ${COMP_WORDS[1]} | sed "s/\/.*//")
+    COMPREPLY=( $(compgen -W "$(svn pg packages http://svn.cern.ch/guest/lhcb | grep " $project" |sed "s/  *.*//"| grep -v "#")" -- $cur) )
+    ;;
+  *)
+    _filedir
+    ;;
+  esac
+}
+complete -F _git-lb-checkout git-lb-checkout
