@@ -1,0 +1,4 @@
+_git_lb_use() {
+  local cur=${COMP_WORDS[COMP_CWORD]}
+  COMPREPLY=( $(compgen -W "Stripping Phys Rec Analysis Hlt Online Brunel Moore DaVinci Tesla Urania Erasmus Gauss" -- $cur) )
+}

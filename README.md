@@ -42,3 +42,7 @@ lists all getpack'able packages
 ### git lb-checkout
 
 completes `git lb-checkout [branches and tags] [packages in the chosen project]`
+
+### git lb-use
+
+suggest projects (not only the application projects like Brunel and DaVinci, but also Rec)
