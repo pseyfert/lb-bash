@@ -1,6 +1,6 @@
 # lb-bash
 
-this is just a bash port of pseyfert/lb-zsh.
+this is just a bash port of [pseyfert/lb-zsh](https://github.com/pseyfert/lb-zsh).
 
 ## demo
 
