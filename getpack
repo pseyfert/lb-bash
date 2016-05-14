@@ -1,0 +1,5 @@
+_getpack() {
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    COMPREPLY=( $(compgen -W "$(svn pg packages http://svn.cern.ch/guest/lhcb | sed "s/  *.*//"| grep -v "#")" -- $cur) )
+}
+complete -F _getpack getpack
