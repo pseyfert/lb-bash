@@ -23,3 +23,12 @@ done
 ```
 
 (okay, loading the files is not super elegant, cleanup needed)
+
+As personal preference, I also put
+
+```
+TAB: menu-complete
+set show-all-if-ambiguous on
+```
+
+into `$HOME/.inputrc`.
