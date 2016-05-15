@@ -16,7 +16,7 @@ git clone https://github.com/pseyfert/lb-bash.git .bash_completion.d
 
 load it by default by adding the following to your `$HOME/.bash_completion` file
 ```
-for v in $(ls $HOME/.bash_completion.d/ | grep -v LICENSE | grep -v README)
+for v in $(ls $HOME/.bash_completion.d/ | grep -v LICENSE | grep -v README | grep -v logo | grep -v svg)
   do
   . $HOME/.bash_completion.d/$v
 done
