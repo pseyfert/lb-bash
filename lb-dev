@@ -1,0 +1,17 @@
+_lb_dev() {
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    case $COMP_CWORD in
+    1)
+      COMPREPLY=( $(compgen -W "Brunel Bender DaVinci Moore Urania Erasmus Tesla Gauss" -- $cur) )
+      ;;
+    2)
+      # FIXME
+      # version numbers get sorted oldest first
+      # cf. https://github.com/pseyfert/lb-zsh/commit/8e77312b6e69eb53acf4d6035a77e3ef3420f38b
+      # this should be fixable with rl_sort_completion_matches
+      # http://unix.stackexchange.com/questions/215937/disable-sorting-of-compreply-in-bash-complete-function
+      COMPREPLY=( $(compgen -W "$(lb-dev -l ${COMP_WORDS[1]} | sed "s/ .*//" | sort -r -V | uniq)" -- $cur) )
+      ;;
+    esac
+}
+complete -F _lb_dev lb-dev
