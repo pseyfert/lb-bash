@@ -1,0 +1,13 @@
+_git_lb_push() {
+  case $COMP_CWORD in
+  2)
+    __gitcomp "$(__git_remotes)"
+    ;;
+  3)
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    local cur_="$cur"
+    local remote=${COMP_WORDS[2]}
+    __gitcomp "$(__git_refs "$remote")" "" ""
+    ;;
+  esac
+}
