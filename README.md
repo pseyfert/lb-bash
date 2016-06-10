@@ -46,3 +46,13 @@ completes `git lb-checkout [branches and tags] [packages in the chosen project]`
 ### git lb-use
 
 suggest projects (not only the application projects like Brunel and DaVinci, but also Rec)
+
+# other hints
+
+The lhcb login scripts already set the bash prompt when invoking `SetupProject`
+or `lb-run XXXX bash`.  To use this feature, you can set the following in your
+`~/.bashrc`
+
+```
+export SP_PROMPT="yes"
+```
